@@ -1,0 +1,19 @@
+create maven project
+pom.xml - copy from properties till end ,into new project
+    line 89- <include> change groupid . no need to write com bxz it is covered in **
+        < include **/restful/**/*</include>
+        < include **/herokuapp/booker/**/*</include>
+        this is for reports
+dependencies -serenity-bdd  (serenity-bdd.info website has all dependencies
+             -serenity-rest-assured (4.0.12)
+             -sernity-maven, serenity-core, serenity-cucumber, slf4, groovy-all, jackson-databind, j
+             -junit-jupiter(latest dependeny of junit is called jupiter, lamdaj - to avoid some error
+
+Edit configuration - click on maven and new name for runner -Student runner
+            add this command - clean verify serenity:aggregate
+
+always run from student runner .-
+reports will be added in target - serenity - index.html
+
+on top of each class name  add - @RunWith(SerenityRunner.class)
+and Just add SerenityRest.given() in every test and the complete report will be generated
